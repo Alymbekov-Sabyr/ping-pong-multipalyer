@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'joystixmonospace';
+    src: url('joystixmonospace.TTF');
+    font-weight: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    left: 0;top: 0;
+    box-sizing: border-box;
+    font-family: 'joystixmonospace';
+}
+
+body {
+    background: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+canvas {
+    background: white;
+    display: none;
+}
+@media (max-width: 489px) {
+    canvas {
+        width: 100vw;
+        height: calc(100vw*(375/667));
+    }
+}
+@media (min-width: 490px) {
+    canvas {
+        width: 100vw;
+        height: calc(100vw*(375/667));
+    }
+}
+.wait {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.finish {
+    background: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.start {
+    background: rgba(0, 0, 0, 0.175);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
