@@ -125,7 +125,7 @@ ws.onmessage = (res) => {
       document.querySelector(".wait").style.display = "none";
         canv.style.display = "none";
         document.querySelector(".finish").style.display="flex";
-        document.querySelector(".finish").innerHTML=`ты победил!<a href="http://127.0.0.1:5500/">Back</a>`
+        document.querySelector(".finish").innerHTML=`ты победил!<a href="https://alymbekov-sabyr.github.io/ping-pong/">Back</a>`
     } else {
       console.log("lost");
       document.querySelector(".wait").style.display = "none";
@@ -240,7 +240,7 @@ function start() {
         document.querySelector(".wait").style.display = "none";
         canv.style.display = "none";
         document.querySelector(".finish").style.display="flex";
-        document.querySelector(".finish").innerHTML=`ты победил!<a href="http://127.0.0.1:5500/">Back</a>`
+        document.querySelector(".finish").innerHTML=`ты победил!<a href="https://alymbekov-sabyr.github.io/ping-pong/">Back</a>`
       } else if (game.scores.pl2>=5) {
           if (game.open){
             ws.send(JSON.stringify({type:"finish",winner:"another",room: game.client_room,game_status:"finish"}));
@@ -259,7 +259,7 @@ function start() {
         client_id: game.client_id,
         game_status: "idet",
         data: {
-          y: player1.y,
+          y: player1.y-2,
         },
       });
       if (game.open) ws.send(obj);
@@ -271,7 +271,7 @@ function start() {
         client_id: game.client_id,
         game_status: "idet",
         data: {
-          y: player1.y,
+          y: player1.y+2,
         },
       });
       if (game.open) ws.send(obj);
