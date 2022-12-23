@@ -259,7 +259,7 @@ function start() {
         client_id: game.client_id,
         game_status: "idet",
         data: {
-          y: player1.y-2,
+          y: player1.y-5,
         },
       });
       if (game.open) ws.send(obj);
@@ -271,7 +271,7 @@ function start() {
         client_id: game.client_id,
         game_status: "idet",
         data: {
-          y: player1.y+2,
+          y: player1.y+5,
         },
       });
       if (game.open) ws.send(obj);
