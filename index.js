@@ -1,6 +1,6 @@
 let canv = document.getElementById("canv");
 let ctx = canv.getContext("2d");
-const ws = new WebSocket("ws://localhost:3000");
+const ws = new WebSocket("wss://pingpongonline2.onrender.com/");
 let game = {
   game_start: false,
   client_room: null,
